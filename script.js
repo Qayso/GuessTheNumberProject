@@ -3,15 +3,43 @@
     - It should be compared to a variable named: numberToGuess
 */
 
+let computersNumber = Math.floor(Math.random() * 100) + 1;
+
+counter = 0;
+
+
+
 function randomNumber(userGuess, computersNumber) {
 
+ finalCount = counter;
+
     // YOUR CODE BELOW
+ if (userGuess < 1 || userGuess > 100) {
+
+    counter++;
+    return "Sorry, that is not a proper value";
+
+} else if (userGuess < computersNumber) {
+    counter++;
+    return "Higher! " + "Guesses = " + counter;
+
+} else if (userGuess > computersNumber) {
+    counter++;
+    return "Lower! " + "Guesses = " + counter;
+
+} else {
+    counter++;
+    return "Correct, the number is " + computersNumber + " --Final Guesses = " + counter; 
+};
+
+};
+
 
 
 
 
     // YOUR CODE ABOVE
-};
+
 
 
 
@@ -28,22 +56,34 @@ function randomNumber(userGuess, computersNumber) {
         - What is the "current number"? The lowest number? Highest?
 
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
-*/
+
+    /// forgot to commit before hand
+
+let num = Math.floor(Math.random() * 100) + 1;
 
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
-
+    
     // YOUR CODE ...
-
+return num;
 
 }
 
 function compGuess(reply) {
-    /* 
-    *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
+    
+      The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
 
-    This should return a string indicating the computers response.
-    */
+    This should return a
+    
+    
+    
+    string indicating the computers response.
+    
+ guess = Math.floor(Math.random() * 100) + 1;
+
+ if(reply = lower){
+    
+ }
 
 }
-
+*/
