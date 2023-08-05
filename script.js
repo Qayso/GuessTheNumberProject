@@ -43,8 +43,8 @@ function randomNumber(userGuess, computersNumber) {
 
 
 
-//* Have the Computer Guess your Number ---------------------------------------------
-/* 
+/* Have the Computer Guess your Number ---------------------------------------------
+
     Build out the functionality for the computer to guess and evaluate your random number.
 
     - There are two static functions framed. DO NOT alter the name or parameters of these functions:
@@ -56,34 +56,27 @@ function randomNumber(userGuess, computersNumber) {
         - What is the "current number"? The lowest number? Highest?
 
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
+*/
 
-    /// forgot to commit before hand
-
-let num = Math.floor(Math.random() * 100) + 1;
+currentNumber = 1;
 
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
     
     // YOUR CODE ...
-return num;
+    return "Is your number " + currentNumber + "?";
 
 }
+
+
 
 function compGuess(reply) {
-    
-      The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
+    /*
+      The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating the logic and response.
 
-    This should return a
+    This should return a string indicating the computers response.
+    */
     
-    
-    
-    string indicating the computers response.
-    
- guess = Math.floor(Math.random() * 100) + 1;
 
- if(reply = lower){
-    
- }
 
-}
-*/
+};
