@@ -58,7 +58,7 @@ function randomNumber(userGuess, computersNumber) {
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
 
-currentNumber = 1;
+let currentNumber = 1;
 
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
@@ -68,7 +68,12 @@ function startCompGuess(num) {
 
 }
 
+let createGuess = () => {
+    let currentNumber = Math.floor(Math.random() * 100) + 1;
+    return currentNumber;
+  };
 
+  console.log(createGuess());
 
 function compGuess(reply) {
     /*

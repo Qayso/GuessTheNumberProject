@@ -50,7 +50,7 @@ Now it's time to have the computer guess the users number!
 
 The computer will have to guess a number between 1 and 100 after the **Start** button is selected. This will fire off the **startCompGuess** function. A number will be provided. *hint: console log the parameter to see what is being provided*
 
-You will need to solve the issue of how to respond depending on the guess and the number the has thought of, the user will need to respond by clicking the "Lower", "Correct", or "Higher" buttons. 
+You will need to solve the issue of how to respond depending on the guess and the number the user has thought of, the user will need to respond by clicking the "Lower", "Correct", or "Higher" buttons. 
 
 When the users clicks those buttons, it should keep track of what is the lowest and highest values to guess between.
 
