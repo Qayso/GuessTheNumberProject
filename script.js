@@ -60,7 +60,7 @@ function randomNumber(userGuess, computersNumber) {
 
 let currentNumber = 1;
 
-function startCompGuess(num) {
+function startCompGuess() {
     // This should return a string that denotes the first guessed number
     
     // YOUR CODE ...
@@ -68,12 +68,13 @@ function startCompGuess(num) {
 
 }
 
+
 let createGuess = () => {
     let currentNumber = Math.floor(Math.random() * 100) + 1;
     return currentNumber;
   };
 
-  console.log(createGuess());
+  createGuess();
 
 function compGuess(reply) {
     /*
@@ -81,7 +82,15 @@ function compGuess(reply) {
 
     This should return a string indicating the computers response.
     */
+switch (reply) {
+
+    case 'lower':
+        return "Your number is lower? Is it " + currentNumber + "?";
+
+    case 'higher':
+        return "Your number is higher? Is it " + currentNumber + "?";
     
-
-
+    case `correct`:
+        return "I knew it was " + currentNumber + "!";
+};
 };

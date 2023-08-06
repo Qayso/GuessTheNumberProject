@@ -139,8 +139,6 @@ Concepts to consider
 
 ### Ticket: `#U2_04`
 - **Given** the `Lower` button is clicked. 
-
-
 - **Then** return a string that states, "Your number is lower? Is it <`currentNumber`>?".
 - **Given** the `Higher` button is clicked. 
 - **Then** return a string that states, "Your number is higher? Is it <`currentNumber`>?".
