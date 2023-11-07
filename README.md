@@ -79,3 +79,25 @@ When the users clicks those buttons, it should keep track of what is the lowest 
 ## After Project
 
 Feel free to review what may be happening in the helpers_do-not-alter folder. Warning: Changing anything in that folder could result in breaking the final view of the display. Adding comments, however, will not! 
+
+
+
+*Explanation ---Stretch Goal*
+
+<!--** Title: Guess The Number Project -->                                     
+
+Guess the Number Project is the second project for Upright Education software programming course. In this project we program two different types of "guess the number games". First part is to create a number game in which the user guesses the computer's secret number between 1-100. The second part is the computer guessing the users secret number between 1-100.
+
+<!--** Build Status -->
+
+The first part of the game where the user guesses the computers number is built on if/ else statements while keeping track of how many guesses before the user answers correctly. The first statement is to make sure the user input is a guess between 1-100, if not correct it will respond with "invalid number" type response. if the numbers are within the range the function will move to the next step. If guess is lower than number it will respond guess higher, if higher will respond guess lower until number is correct in which it will say Correct and message the number of total guesses.
+
+Second part of the project where computer guesses users number6
+
+<!--** Tech/Framework -->
+
+In this project we used HTML and CSS. We implented grid system for our game board.We used flex our headers and buttons along with the divs encapsulating our grid framework. We also added images and CSS styling for buttons to make it a bit more "fun". Mostly to play around with and learn CSS. Logo sits up on top left with absolute positioning so it is consistent with all 'rounds' pages.
+
+<!--** How To -->
+
+Unfortunately this is just a template and not an actual game. You can however navigate the webpages with 'Play', Previous and Next Buttons. Game over button on final round does not take you anywhere. However if you pretend you lost, you can click it uncontrollably to help ease your fake lost. Keep your head up King/Queen!

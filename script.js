@@ -3,45 +3,36 @@
     - It should be compared to a variable named: numberToGuess
 */
 
-let computersNumber = Math.floor(Math.random() * 100) + 1;
-
 counter = 0;
 
-
-
+// Guess the number for client
 function randomNumber(userGuess, computersNumber) {
-
- finalCount = counter;
-
-    // YOUR CODE BELOW
- if (userGuess < 1 || userGuess > 100) {
-
+  // YOUR CODE BELOW
+  // first if statement for checking correct values between 1-100 if otherwise will respond with an error type message
+  if (userGuess < 1 || userGuess > 100) {
     counter++;
     return "Sorry, that is not a proper value";
-
-} else if (userGuess < computersNumber) {
+    // Response if users guess is lower than computers number
+  } else if (userGuess < computersNumber) {
     counter++;
     return "Higher! " + "Guesses = " + counter;
-
-} else if (userGuess > computersNumber) {
+    // Response if users guess is higher than computers number
+  } else if (userGuess > computersNumber) {
     counter++;
     return "Lower! " + "Guesses = " + counter;
-
-} else {
+    //  Response if user guesses correctly!
+  } else {
     counter++;
-    return "Correct, the number is " + computersNumber + " --Final Guesses = " + counter; 
-};
+    return (
+      "Correct, the number is " +
+      computersNumber +
+      " --Final Guesses = " +
+      counter
+    );
+  }
+}
 
-};
-
-
-
-
-
-    // YOUR CODE ABOVE
-
-
-
+// YOUR CODE ABOVE
 
 /* Have the Computer Guess your Number ---------------------------------------------
 
@@ -57,40 +48,47 @@ function randomNumber(userGuess, computersNumber) {
 
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
+// Declaring variables 
+let currentNumber = 1; 
+ let lowest = 1 ; 
+let highest = 100;
 
-let currentNumber = 1;
-
+// function for starting the game
 function startCompGuess() {
-    // This should return a string that denotes the first guessed number
-    
-    // YOUR CODE ...
-    return "Is your number " + currentNumber + "?";
+  // This should return a string that denotes the first guessed number
 
+  // YOUR CODE ...
+  return "Is your number " + currentNumber + "?";
 }
 
-
+// Creating guess from replies "lower" or "higher"
 let createGuess = () => {
-    let currentNumber = Math.floor(Math.random() * 100) + 1;
-    return currentNumber;
+   currentNumber = Math.floor(Math.random() * (highest - lowest + 1)) + lowest;
+    return currentNumber
+
   };
 
-  createGuess();
-
+// Responses and refactoring values for createGuess function
 function compGuess(reply) {
-    /*
+  /*
       The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating the logic and response.
 
     This should return a string indicating the computers response.
     */
-switch (reply) {
+  switch (reply) {
+    case "lower":
+       highest = currentNumber - 1
+      createGuess();
 
-    case 'lower':
-        return "Your number is lower? Is it " + currentNumber + "?";
+      return "Your number is lower? Is it " + currentNumber + "?";
 
-    case 'higher':
-        return "Your number is higher? Is it " + currentNumber + "?";
-    
+    case "higher":
+      lowest = currentNumber + 1
+      createGuess();
+
+      return "Your number is higher? Is it " + currentNumber + "?";
+
     case `correct`:
-        return "I knew it was " + currentNumber + "!";
-};
-};
+      return "I knew it was " + currentNumber + "!";
+  }
+}
